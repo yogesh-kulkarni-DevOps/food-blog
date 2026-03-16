@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Simple Home Recipes</title>
+<meta name="description" content="Discover easy and delicious home recipes for every meal. From pasta to omelettes, cook simple dishes with step-by-step instructions.">
+<meta name="keywords" content="recipes, cooking, food blog, home cooking, easy meals">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVVFMGZ03Z"></script>
@@ -64,11 +64,31 @@ box-shadow:0 2px 5px rgba(0,0,0,0.1);
 color:#e64a19;
 }
 
+.recipe-image {
+width:100%;
+max-width:400px;
+height:auto;
+margin-bottom:10px;
+}
+
+.recipe-meta {
+font-size:0.9em;
+color:#666;
+margin-bottom:10px;
+}
+
 footer{
 text-align:center;
 padding:20px;
 background:#333;
 color:white;
+}
+
+@media (max-width: 768px) {
+    .container { width: 95%; padding: 10px; }
+    nav { padding: 5px; }
+    nav a { display: block; margin: 5px 0; }
+    .recipe { padding: 15px; }
 }
 
 </style>
@@ -88,10 +108,14 @@ color:white;
 <a href="#">About</a>
 </nav>
 
-<div class="container">
+<main class="container">
 
-<div class="recipe">
+<article class="recipe">
 <h2>Vegetable Pasta</h2>
+
+<img src="images/vegetable-pasta.jpg" alt="Delicious vegetable pasta dish" class="recipe-image">
+
+<p class="recipe-meta">By Simple Home Recipes | March 16, 2026</p>
 
 <p><strong>Ingredients</strong></p>
 
@@ -111,11 +135,14 @@ color:white;
 <li>Season with salt and pepper</li>
 </ol>
 
-</div>
+</article>
 
-<div class="recipe">
-
+<article class="recipe">
 <h2>Classic Omelette</h2>
+
+<img src="images/classic-omelette.jpg" alt="Fluffy classic omelette" class="recipe-image">
+
+<p class="recipe-meta">By Simple Home Recipes | March 16, 2026</p>
 
 <p><strong>Ingredients</strong></p>
 
@@ -135,12 +162,41 @@ color:white;
 <li>Cook for 2 minutes and fold</li>
 </ol>
 
-</div>
+</article>
 
-</div>
+<article class="recipe">
+<h2>Grilled Chicken Salad</h2>
+
+<img src="images/grilled-chicken-salad.jpg" alt="Healthy grilled chicken salad" class="recipe-image">
+
+<p class="recipe-meta">By Simple Home Recipes | March 16, 2026</p>
+
+<p><strong>Ingredients</strong></p>
+
+<ul>
+<li>200g chicken breast</li>
+<li>Mixed greens</li>
+<li>1 tbsp olive oil</li>
+<li>Lemon juice</li>
+</ul>
+
+<p><strong>Instructions</strong></p>
+
+<ol>
+<li>Grill chicken for 10 minutes</li>
+<li>Mix with greens</li>
+<li>Drizzle oil and lemon</li>
+</ol>
+
+</article>
+
+</main>
+
+</main>
 
 <footer>
-<p>© 2026 Simple Home Recipes</p>
+<p>&copy; 2026 Simple Home Recipes. All rights reserved.</p>
+<p><a href="#" style="color:#ffe0b2;">Contact Us</a> | <a href="#" style="color:#ffe0b2;">Privacy Policy</a> | <a href="#" style="color:#ffe0b2;">Terms of Service</a></p>
 </footer>
 
 </body>
