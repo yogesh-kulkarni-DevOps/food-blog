@@ -1,94 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Discover easy and delicious home recipes for every meal. From pasta to omelettes, cook simple dishes with step-by-step instructions.">
-<meta name="keywords" content="recipes, cooking, food blog, home cooking, easy meals">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVVFMGZ03Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<title>Delicious Food Blog</title>
 
-  gtag('config', 'G-WVVFMGZ03Z');
-</script>
+<meta name="description" content="Explore delicious homemade recipes with step-by-step cooking guides.">
+<meta name="keywords" content="food blog, recipes, cooking, homemade food">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
 background:#fafafa;
 color:#333;
 }
 
+/* HEADER */
+
 header{
 background:#ff7043;
 color:white;
-padding:20px;
+padding:25px;
 text-align:center;
 }
 
+header h1{
+font-size:36px;
+}
+
+/* NAVIGATION */
+
 nav{
-text-align:center;
-padding:10px;
 background:#ffe0b2;
+text-align:center;
+padding:12px;
 }
 
 nav a{
 margin:0 15px;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
 color:#333;
 }
 
-.container{
-width:80%;
-margin:auto;
-padding:20px;
-}
-
-.recipe{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:8px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-
-.recipe h2{
+nav a:hover{
 color:#e64a19;
 }
 
-.recipe-image {
+/* HERO */
+
+.hero{
+height:350px;
+background:url("https://images.unsplash.com/photo-1504674900247-0877df9cc836") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
+}
+
+.hero h2{
+font-size:40px;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+}
+
+/* CONTAINER */
+
+.container{
+width:85%;
+margin:auto;
+padding:40px 0;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+/* RECIPE CARD */
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
 width:100%;
-max-width:400px;
-height:auto;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+color:#e64a19;
 margin-bottom:10px;
 }
 
-.recipe-meta {
-font-size:0.9em;
-color:#666;
+.card-content p{
+font-size:14px;
 margin-bottom:10px;
 }
+
+.btn{
+display:inline-block;
+padding:8px 15px;
+background:#ff7043;
+color:white;
+border-radius:5px;
+text-decoration:none;
+font-size:14px;
+}
+
+.btn:hover{
+background:#e64a19;
+}
+
+/* FOOTER */
 
 footer{
-text-align:center;
-padding:20px;
 background:#333;
 color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
 }
 
-@media (max-width: 768px) {
-    .container { width: 95%; padding: 10px; }
-    nav { padding: 5px; }
-    nav a { display: block; margin: 5px 0; }
-    .recipe { padding: 15px; }
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:28px;
+}
+
+.container{
+width:95%;
+}
+
 }
 
 </style>
@@ -98,107 +172,71 @@ color:white;
 <body>
 
 <header>
-<h1>Simple Home Recipes</h1>
-<p>Easy recipes anyone can cook</p>
+<h1>🍲 Delicious Food Blog</h1>
+<p>Simple Recipes Anyone Can Cook</p>
 </header>
 
 <nav>
 <a href="#">Home</a>
 <a href="#">Recipes</a>
-<a href="#">About</a>
+<a href="#">Healthy</a>
+<a href="#">Contact</a>
 </nav>
 
-<main class="container">
+<section class="hero">
+<h2>Discover Tasty Homemade Recipes</h2>
+</section>
 
-<article class="recipe">
-<h2>Vegetable Pasta</h2>
+<section class="container">
 
-<img src="images/vegetable-pasta.jpg" alt="Delicious vegetable pasta dish" class="recipe-image">
+<div class="grid">
 
-<p class="recipe-meta">By Simple Home Recipes | March 16, 2026</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e">
+<div class="card-content">
+<h3>Vegetable Pasta</h3>
+<p>Healthy pasta with fresh vegetables and olive oil.</p>
+<a href="#" class="btn">View Recipe</a>
+</div>
+</div>
 
-<p><strong>Ingredients</strong></p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551218808-94e220e084d2">
+<div class="card-content">
+<h3>Classic Omelette</h3>
+<p>Quick breakfast omelette with onions and herbs.</p>
+<a href="#" class="btn">View Recipe</a>
+</div>
+</div>
 
-<ul>
-<li>200g pasta</li>
-<li>1 cup chopped vegetables</li>
-<li>2 tbsp olive oil</li>
-<li>Salt and pepper</li>
-</ul>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+<div class="card-content">
+<h3>Chicken Salad</h3>
+<p>Fresh grilled chicken salad with lemon dressing.</p>
+<a href="#" class="btn">View Recipe</a>
+</div>
+</div>
 
-<p><strong>Instructions</strong></p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512058564366-c9e7e3e2b34c">
+<div class="card-content">
+<h3>Homemade Pizza</h3>
+<p>Delicious pizza with mozzarella and basil.</p>
+<a href="#" class="btn">View Recipe</a>
+</div>
+</div>
 
-<ol>
-<li>Boil pasta for 8 minutes</li>
-<li>Sauté vegetables in olive oil</li>
-<li>Add pasta and mix well</li>
-<li>Season with salt and pepper</li>
-</ol>
+</div>
 
-</article>
-
-<article class="recipe">
-<h2>Classic Omelette</h2>
-
-<img src="images/classic-omelette.jpg" alt="Fluffy classic omelette" class="recipe-image">
-
-<p class="recipe-meta">By Simple Home Recipes | March 16, 2026</p>
-
-<p><strong>Ingredients</strong></p>
-
-<ul>
-<li>2 eggs</li>
-<li>Salt</li>
-<li>1 tbsp butter</li>
-<li>Chopped onions</li>
-</ul>
-
-<p><strong>Instructions</strong></p>
-
-<ol>
-<li>Beat eggs with salt</li>
-<li>Heat butter in a pan</li>
-<li>Add onions and pour eggs</li>
-<li>Cook for 2 minutes and fold</li>
-</ol>
-
-</article>
-
-<article class="recipe">
-<h2>Grilled Chicken Salad</h2>
-
-<img src="images/grilled-chicken-salad.jpg" alt="Healthy grilled chicken salad" class="recipe-image">
-
-<p class="recipe-meta">By Simple Home Recipes | March 16, 2026</p>
-
-<p><strong>Ingredients</strong></p>
-
-<ul>
-<li>200g chicken breast</li>
-<li>Mixed greens</li>
-<li>1 tbsp olive oil</li>
-<li>Lemon juice</li>
-</ul>
-
-<p><strong>Instructions</strong></p>
-
-<ol>
-<li>Grill chicken for 10 minutes</li>
-<li>Mix with greens</li>
-<li>Drizzle oil and lemon</li>
-</ol>
-
-</article>
-
-</main>
-
-</main>
+</section>
 
 <footer>
-<p>&copy; 2026 Simple Home Recipes. All rights reserved.</p>
-<p><a href="#" style="color:#ffe0b2;">Contact Us</a> | <a href="#" style="color:#ffe0b2;">Privacy Policy</a> | <a href="#" style="color:#ffe0b2;">Terms of Service</a></p>
+
+<p>© 2026 Delicious Food Blog</p>
+<p>Made with ❤️ for food lovers</p>
+
 </footer>
 
 </body>
-
 </html>
